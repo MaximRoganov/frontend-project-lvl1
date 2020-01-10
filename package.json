@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,8 @@
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7"
+  },
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
