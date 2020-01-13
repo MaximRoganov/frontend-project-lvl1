@@ -12,7 +12,7 @@
     "dist"
   ],
   "bin": {
-    "brain-even": "dist/bin/brain-games.js"
+    "brain-even": "dist/bin/brain-even.js"
   },
   "repository": {
     "type": "git",
