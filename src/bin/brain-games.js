@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-import getName from '..';
+import { getName, userWelcome, userTest } from '..';
 
 console.log('Welcome to the Brain Games2!');
-getName();
+
+const name = getName();
+userWelcome(name);
+userTest(name);
