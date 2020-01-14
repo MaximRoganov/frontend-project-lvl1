@@ -6,4 +6,4 @@
 
 How it works:
 
-[![asciicast](https://asciinema.org/a/VMyzN88wEOKRwP9X0llgJ4rZh.svg)](https://asciinema.org/a/VMyzN88wEOKRwP9X0llgJ4rZh)
+[![asciicast](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0.svg)](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0)
