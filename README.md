@@ -7,3 +7,7 @@
 How it works:
 
 [![asciicast](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0.svg)](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0)
+
+GCD Games:
+
+[![asciicast](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG.svg)](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG)
