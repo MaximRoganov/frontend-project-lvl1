@@ -87,7 +87,7 @@ const getDivider = (numb) => {
   return myArray;
 };
 // Узнать общие делители(сравнили 2 массива и получили одинаковые элементы массива)
-const getBothDivider = (firstNum,secondNum) => {
+const getBothDivider = (firstNum, secondNum) => {
   const myArray = [];
   for (let i = 0; i <= firstNum.length - 1; i += 1) {
     for (let b = 0; b <= secondNum.length - 1; b += 1) {
@@ -112,10 +112,9 @@ const getBiggerDivider = (dividerArray) => {
 const userTest3 = (username) => {
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
-
     const firstNum = getRandom();
     const secondNum = getRandom();
-    const result = getBiggerDivider(getBothDivider(getDivider(firstNum),getDivider(secondNum)));
+    const result = getBiggerDivider(getBothDivider(getDivider(firstNum), getDivider(secondNum)));
 
     const answer = readlineSync.question(`Quest :  NOD of ${firstNum} and ${secondNum} = ? `);
     if (parseInt(answer, 10) === result) {
