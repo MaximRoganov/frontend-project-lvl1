@@ -11,3 +11,6 @@ How it works:
 GCD Games:
 
 [![asciicast](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG.svg)](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG)
+
+Progression game:
+[![asciicast](https://asciinema.org/a/8KW3Zh1uQBpUuusZIJw943zDs.svg)](https://asciinema.org/a/8KW3Zh1uQBpUuusZIJw943zDs)
