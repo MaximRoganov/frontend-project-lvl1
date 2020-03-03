@@ -9,7 +9,7 @@ const makeProgression = (start, step) => {
   return summator;
 };
 
-// Заменить нужный элемент массива на многоточие
+//  Заменить нужный элемент массива на многоточие
 const replacePosition = (arr, position) => {
   arr.splice(position, 1, '...');
   return arr;
