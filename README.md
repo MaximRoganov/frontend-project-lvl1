@@ -6,7 +6,7 @@ Codeclimate:
 
 Github actions
 
-![](https://github.com/actions/hello-world/workflows/Greet%20Everyone/badge.svg)
+![Node.js CI](https://github.com/MaximRoganov/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)
 
 How it works:
 
