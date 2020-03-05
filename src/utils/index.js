@@ -6,10 +6,10 @@ const userWelcome = (name) => {
   console.log(`Hello ${name}!`);
 };
 
-const getRandom = (maxNumber = 100) => {
-  const number = Math.random();
-  return (Math.floor(number * maxNumber));
-};
+const getRandom = (
+  maxNumber = 100,
+  minNumber = 1,
+) => Math.floor(minNumber + Math.random() * (maxNumber + 1 - minNumber));
 
 const getGameName = () => readlineSync.question('calc,even,gcd,prime,progression?');
 
