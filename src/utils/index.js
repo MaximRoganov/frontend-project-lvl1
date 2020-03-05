@@ -11,8 +11,11 @@ const getRandom = (maxNumber = 100) => {
   return (Math.floor(number * maxNumber));
 };
 
+const getGameName = () => readlineSync.question('calc,even,gcd,prime,progression?');
+
 export {
   getName,
   userWelcome,
   getRandom,
+  getGameName,
 };

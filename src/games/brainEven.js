@@ -21,7 +21,7 @@ const brainEven = (username = 'Username') => {
   if (summary === 3) {
     console.log(`Congratulations, ${username}!`);
   } else {
-    console.log(`Unfortunatly, ${username}, you are not a winner!`);
+    console.log(`Unfortunately, ${username}, you are not a winner!`);
   }
 };
 export default brainEven;

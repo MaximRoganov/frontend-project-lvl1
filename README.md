@@ -8,18 +8,18 @@ Github actions
 
 ![Node.js CI](https://github.com/MaximRoganov/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)
 
-How it works:
+brain even:
 
 [![asciicast](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0.svg)](https://asciinema.org/a/TQsjNf7aBkS8s0s5MLPQGjHl0)
 
-GCD Games:
+brain gcd:
 
 [![asciicast](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG.svg)](https://asciinema.org/a/IFEVqSv9ez7Phefd6WuEQLpxG)
 
-Progression game:
+brain progression:
 
 [![asciicast](https://asciinema.org/a/8KW3Zh1uQBpUuusZIJw943zDs.svg)](https://asciinema.org/a/8KW3Zh1uQBpUuusZIJw943zDs)
 
-Prime game:
+brain prime:
 
 [![asciicast](https://asciinema.org/a/3iMWQBv64sbRoGxhNfKocgIu2.svg)](https://asciinema.org/a/3iMWQBv64sbRoGxhNfKocgIu2)
