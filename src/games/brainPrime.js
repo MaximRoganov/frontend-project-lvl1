@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandom } from '../utils';
+import { getRandom, getName, userWelcome } from '../utils';
 // Простое ли число?
 const isSimple = (num) => {
   if (num === 1) {
@@ -13,7 +13,11 @@ const isSimple = (num) => {
   return true;
 };
 
-const brainPrime = (username) => {
+const brainPrime = () => {
+  console.log('Welcome to the Brain Games2!');
+  const username = getName();
+  userWelcome(username);
+
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const num = getRandom();

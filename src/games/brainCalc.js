@@ -1,7 +1,12 @@
 import readlineSync from 'readline-sync';
-import { getRandom } from '../utils';
+import { getRandom, getName, userWelcome } from '../utils';
 
-const brainCalc = (username) => {
+
+const brainCalc = () => {
+  console.log('Welcome to the Brain Games2!');
+  const username = getName();
+  userWelcome(username);
+
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const numForOper = Math.floor(Math.random() * 2);

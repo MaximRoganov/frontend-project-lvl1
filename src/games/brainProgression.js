@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandom } from '../utils';
+import { getRandom, getName, userWelcome } from '../utils';
 // Сделать массив-прогрессию
 const makeProgression = (start, step) => {
   const summator = [];
@@ -15,7 +15,11 @@ const replacePosition = (arr, position) => {
   return arr;
 };
 
-const brainProgression = (username) => {
+const brainProgression = () => {
+  console.log('Welcome to the Brain Games2!');
+  const username = getName();
+  userWelcome(username);
+
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const firstNum = getRandom();

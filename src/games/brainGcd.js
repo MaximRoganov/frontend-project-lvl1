@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandom } from '../utils';
+import { getRandom, getName, userWelcome } from '../utils';
 // Узнать делители и вывести их в массиве
 const getDivider = (numb) => {
   const myArray = [];
@@ -33,7 +33,11 @@ const getBiggerDivider = (dividerArray) => {
   return biggerNum;
 };
 
-const brainGcd = (username) => {
+const brainGcd = () => {
+  console.log('Welcome to the Brain Games2!');
+  const username = getName();
+  userWelcome(username);
+
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const firstNum = getRandom();
