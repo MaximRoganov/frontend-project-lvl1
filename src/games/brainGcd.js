@@ -33,10 +33,14 @@ const getBiggerDivider = (dividerArray) => {
   return biggerNum;
 };
 
-const brainGcd = () => {
-  console.log('Welcome to the Brain Games2!');
-  const username = getName();
-  userWelcome(username);
+const brainGcd = (name) => {
+  let username;
+  if (name) {
+    username = name;
+  } else {
+    username = getName();
+    userWelcome(username);
+  }
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {

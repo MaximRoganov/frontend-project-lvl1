@@ -2,10 +2,15 @@ import readlineSync from 'readline-sync';
 import { getRandom, getName, userWelcome } from '../utils';
 
 
-const brainCalc = () => {
-  console.log('Welcome to the Brain Games2!');
-  const username = getName();
-  userWelcome(username);
+const brainCalc = (name) => {
+  let username;
+  if (name) {
+    username = name;
+  } else {
+    username = getName();
+    userWelcome(username);
+  }
+
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {

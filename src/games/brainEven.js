@@ -3,10 +3,14 @@ import { getRandom, getName, userWelcome } from '../utils';
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-const brainEven = () => {
-  console.log('Welcome to the Brain Games2!');
-  const username = getName();
-  userWelcome(username);
+const brainEven = (name) => {
+  let username;
+  if (name) {
+    username = name;
+  } else {
+    username = getName();
+    userWelcome(username);
+  }
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {

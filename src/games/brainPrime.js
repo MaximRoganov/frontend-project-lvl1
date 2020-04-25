@@ -13,10 +13,14 @@ const isSimple = (num) => {
   return true;
 };
 
-const brainPrime = () => {
-  console.log('Welcome to the Brain Games2!');
-  const username = getName();
-  userWelcome(username);
+const brainPrime = (name) => {
+  let username;
+  if (name) {
+    username = name;
+  } else {
+    username = getName();
+    userWelcome(username);
+  }
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
