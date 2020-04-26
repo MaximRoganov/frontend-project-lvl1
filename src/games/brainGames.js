@@ -15,19 +15,19 @@ const brainGames = () => {
 
   switch (choosenGame) {
     case 'calc':
-      brainCalc(name);
+      brainCalc(name, false);
       break;
     case 'even':
-      brainEven(name);
+      brainEven(name, false);
       break;
     case 'gcd':
-      brainGcd(name);
+      brainGcd(name, false);
       break;
     case 'prime':
-      brainPrime(name);
+      brainPrime(name, false);
       break;
     case 'progression':
-      brainProgression(name);
+      brainProgression(name, false);
       break;
     default:
       console.log('You dont choose a game');

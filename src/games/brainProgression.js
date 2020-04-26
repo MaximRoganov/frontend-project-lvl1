@@ -1,5 +1,11 @@
 import readlineSync from 'readline-sync';
-import { getRandom, getName, userWelcome } from '../utils';
+import {
+  getRandom,
+  getName,
+  userWelcome,
+  makeResult,
+  makeLocalResult,
+} from '../utils';
 // Сделать массив-прогрессию
 const makeProgression = (start, step) => {
   const summator = [];
@@ -15,12 +21,8 @@ const replacePosition = (arr, position) => {
   return arr;
 };
 
-const brainProgression = (name) => {
-  let username;
-  if (name) {
-    username = name;
-  } else {
-    username = getName();
+const brainProgression = (username = getName(), needWelcome = true) => {
+  if (needWelcome) {
     userWelcome(username);
   }
 
@@ -32,22 +34,13 @@ const brainProgression = (name) => {
     const progression = makeProgression(firstNum, step);
 
     const numofToChange = getRandom(10);
-    const result = progression[numofToChange];
+    const expected = progression[numofToChange];
     const stringProgression = replacePosition(progression, numofToChange);
 
     const answer = readlineSync.question(`Quest : Write the undefined step of ariphmetic progression ${stringProgression.toString()} = ? `);
-    if (parseInt(answer, 10) === result) {
-      summary += 1;
-      console.log('Correct!');
-    } else {
-      console.log('Incorrect!');
-    }
+    summary = makeLocalResult(parseInt(answer, 10), expected, summary);
   }
-  if (summary === 3) {
-    console.log(`Congratulations, ${username}!`);
-  } else {
-    console.log(`Unfortunately, ${username}, you are not a winner!`);
-  }
+  makeResult(username, summary);
 };
 
 export default brainProgression;

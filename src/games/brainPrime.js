@@ -1,5 +1,11 @@
 import readlineSync from 'readline-sync';
-import { getRandom, getName, userWelcome } from '../utils';
+import {
+  getRandom,
+  getName,
+  userWelcome,
+  makeResult,
+  makeLocalResult,
+} from '../utils';
 // Простое ли число?
 const isSimple = (num) => {
   if (num === 1) {
@@ -13,31 +19,18 @@ const isSimple = (num) => {
   return true;
 };
 
-const brainPrime = (name) => {
-  let username;
-  if (name) {
-    username = name;
-  } else {
-    username = getName();
+const brainPrime = (username = getName(), needWelcome = true) => {
+  if (needWelcome) {
     userWelcome(username);
   }
-
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const num = getRandom();
-    const result = isSimple(num) ? 'yes' : 'no';
+    const expected = isSimple(num) ? 'yes' : 'no';
     const answer = readlineSync.question(`Quest : Is ${num} simple (yes or no)? `);
-    if (answer === result) {
-      summary += 1;
-      console.log('Correct!');
-    } else {
-      console.log('Incorrect!');
-    }
+
+    summary = makeLocalResult(answer, expected, summary);
   }
-  if (summary === 3) {
-    console.log(`Congratulations, ${username}!`);
-  } else {
-    console.log(`Unfortunately, ${username}, you are not a winner!`);
-  }
+  makeResult(username, summary);
 };
 export default brainPrime;

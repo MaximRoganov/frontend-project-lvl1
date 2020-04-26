@@ -1,35 +1,28 @@
 import readlineSync from 'readline-sync';
-import { getRandom, getName, userWelcome } from '../utils';
+import {
+  getRandom,
+  getName,
+  userWelcome,
+  makeResult,
+  makeLocalResult,
+} from '../utils';
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-const brainEven = (name) => {
-  let username;
-  if (name) {
-    username = name;
-  } else {
-    username = getName();
+const brainEven = (username = getName(), needWelcome = true) => {
+  if (needWelcome) {
     userWelcome(username);
   }
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {
     const number = getRandom();
-    const expecteed = isEven(number);
+    const expected = isEven(number);
 
     const answer = readlineSync.question(`Quest : ${number} is even? `);
 
-    if (answer === expecteed) {
-      summary += 1;
-      console.log('Correct!');
-    } else {
-      console.log('Incorrect!');
-    }
+    summary = makeLocalResult(answer, expected, summary);
   }
-  if (summary === 3) {
-    console.log(`Congratulations, ${username}!`);
-  } else {
-    console.log(`Unfortunately, ${username}, you are not a winner!`);
-  }
+  makeResult(username, summary);
 };
 export default brainEven;
