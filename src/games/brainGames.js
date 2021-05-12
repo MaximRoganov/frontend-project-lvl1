@@ -1,9 +1,9 @@
-import { getName, userWelcome, getGameName } from '../utils';
-import brainCalc from './brainCalc';
-import brainEven from './brainEven';
-import brainGcd from './brainGcd';
-import brainPrime from './brainPrime';
-import brainProgression from './brainProgression';
+import { getName, userWelcome, getGameName } from '../utils/index.js';
+import brainCalc from './brainCalc.js';
+import brainEven from './brainEven.js';
+import brainGcd from './brainGcd.js';
+import brainPrime from './brainPrime.js';
+import brainProgression from './brainProgression.js';
 
 const brainGames = () => {
   const name = getName();

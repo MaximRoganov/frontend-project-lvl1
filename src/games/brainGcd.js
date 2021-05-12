@@ -5,7 +5,7 @@ import {
   userWelcome,
   makeResult,
   makeLocalResult,
-} from '../utils';
+} from '../utils/index.js';
 // Узнать делители и вывести их в массиве
 const getDivider = (numb) => {
   const myArray = [];

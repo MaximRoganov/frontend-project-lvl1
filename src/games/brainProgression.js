@@ -5,7 +5,7 @@ import {
   userWelcome,
   makeResult,
   makeLocalResult,
-} from '../utils';
+} from '../utils/index.js';
 // Сделать массив-прогрессию
 const makeProgression = (start, step) => {
   const summator = [];
@@ -25,7 +25,6 @@ const brainProgression = (username = getName(), needWelcome = true) => {
   if (needWelcome) {
     userWelcome(username);
   }
-
 
   let summary = 0;
   for (let i = 0; i < 3; i += 1) {

@@ -5,8 +5,7 @@ import {
   userWelcome,
   makeResult,
   makeLocalResult,
-} from '../utils';
-
+} from '../utils/index.js';
 
 const brainCalc = (username = getName(), needWelcome = true) => {
   if (needWelcome) {

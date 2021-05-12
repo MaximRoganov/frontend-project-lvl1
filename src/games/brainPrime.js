@@ -5,7 +5,7 @@ import {
   userWelcome,
   makeResult,
   makeLocalResult,
-} from '../utils';
+} from '../utils/index.js';
 // Простое ли число?
 const isSimple = (num) => {
   if (num === 1) {

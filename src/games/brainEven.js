@@ -5,7 +5,7 @@ import {
   userWelcome,
   makeResult,
   makeLocalResult,
-} from '../utils';
+} from '../utils/index.js';
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
