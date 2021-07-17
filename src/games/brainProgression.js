@@ -27,7 +27,9 @@ const brainProgression = (username = getName(), needWelcome = true) => {
   }
 
   let summary = 0;
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfAttempts = 3;
+
+  for (let i = 0; i < numberOfAttempts; i += 1) {
     const firstNum = getRandom();
     const step = getRandom();
     const progression = makeProgression(firstNum, step);

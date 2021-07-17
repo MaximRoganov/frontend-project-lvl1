@@ -13,7 +13,9 @@ const brainCalc = (username = getName(), needWelcome = true) => {
   }
 
   let summary = 0;
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfAttempts = 3;
+
+  for (let i = 0; i < numberOfAttempts; i += 1) {
     const numForOper = Math.floor(Math.random() * 2);
     const firstNum = getRandom();
     const secondNum = getRandom();

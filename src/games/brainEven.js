@@ -15,7 +15,9 @@ const brainEven = (username = getName(), needWelcome = true) => {
   }
 
   let summary = 0;
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfAttempts = 3;
+
+  for (let i = 0; i < numberOfAttempts; i += 1) {
     const number = getRandom();
     const expected = isEven(number);
 
