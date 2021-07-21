@@ -29,7 +29,7 @@ const brainPrime = (username = getName(), needWelcome = true) => {
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const num = getRandom();
     const expected = isSimple(num) ? 'yes' : 'no';
-    const answer = readlineSync.question(`Quest : Is ${num} simple (yes or no)? `);
+    const answer = readlineSync.question(`Question: ${num}`);
 
     summary = makeLocalResult(answer, expected, summary,username);
     if(summary === -1){
