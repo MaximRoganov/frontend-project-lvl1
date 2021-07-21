@@ -39,7 +39,10 @@ const brainProgression = (username = getName(), needWelcome = true) => {
     const stringProgression = replacePosition(progression, numofToChange);
 
     const answer = readlineSync.question(`Quest : Write the undefined step of ariphmetic progression ${stringProgression.toString()} = ? `);
-    summary = makeLocalResult(parseInt(answer, 10), expected, summary);
+    summary = makeLocalResult(parseInt(answer, 10), expected, summary,username);
+    if(summary === -1){
+      return;
+    }
   }
   makeResult(username, summary);
 };

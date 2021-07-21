@@ -53,7 +53,10 @@ const brainGcd = (username = getName(), needWelcome = true) => {
     const expected = getBiggerDivider(getBothDivider(getDivider(firstNum), getDivider(secondNum)));
 
     const answer = readlineSync.question(`Quest :  NOD of ${firstNum} and ${secondNum} = ? `);
-    summary = makeLocalResult(parseInt(answer, 10), expected, summary);
+    summary = makeLocalResult(parseInt(answer, 10), expected, summary,username);
+    if(summary === -1){
+      return;
+    }
   }
   makeResult(username, summary);
 };

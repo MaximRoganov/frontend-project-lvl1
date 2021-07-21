@@ -13,13 +13,15 @@ const getRandom = (
 
 const getGameName = () => readlineSync.question('calc,even,gcd,prime,progression?');
 
-const makeLocalResult = (answer, expected, summary) => {
+const makeLocalResult = (answer, expected, summary, username) => {
   let localSummary = summary;
   if (answer === expected) {
     localSummary += 1;
     console.log('Correct!');
   } else {
-    console.log('Incorrect!');
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expected}'.`);
+    console.log(`Let's try again, ${username}!`)
+    localSummary = -1;
   }
   return localSummary;
 };
