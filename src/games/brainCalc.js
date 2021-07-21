@@ -41,8 +41,8 @@ const brainCalc = (username = getName(), needWelcome = true) => {
     }
 
     const answer = readlineSync.question(`Question: ${firstNum} ${oper} ${secondNum}`);
-    summary = makeLocalResult(parseInt(answer, 10), expected, summary,username);
-    if(summary === -1){
+    summary = makeLocalResult(parseInt(answer, 10), expected, summary, username);
+    if (summary === -1) {
       return;
     }
   }

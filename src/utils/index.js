@@ -20,7 +20,7 @@ const makeLocalResult = (answer, expected, summary, username) => {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expected}'.`);
-    console.log(`Let's try again, ${username}!`)
+    console.log(`Let's try again, ${username}!`);
     localSummary = -1;
   }
   return localSummary;

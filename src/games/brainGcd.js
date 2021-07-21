@@ -53,8 +53,8 @@ const brainGcd = (username = getName(), needWelcome = true) => {
     const expected = getBiggerDivider(getBothDivider(getDivider(firstNum), getDivider(secondNum)));
 
     const answer = readlineSync.question(`Question: ${firstNum} ${secondNum}`);
-    summary = makeLocalResult(parseInt(answer, 10), expected, summary,username);
-    if(summary === -1){
+    summary = makeLocalResult(parseInt(answer, 10), expected, summary, username);
+    if (summary === -1) {
       return;
     }
   }

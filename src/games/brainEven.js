@@ -12,7 +12,7 @@ const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 const brainEven = (username = getName(), needWelcome = true) => {
   if (needWelcome) {
     userWelcome(username);
-    console.log(`Answer 'yes' if number even otherwise answer 'no'.`);
+    console.log('Answer \'yes\' if number even otherwise answer \'no\'.');
   }
 
   let summary = 0;
@@ -23,8 +23,8 @@ const brainEven = (username = getName(), needWelcome = true) => {
     const expected = isEven(number);
     const answer = readlineSync.question(`Question: ${number} `);
 
-    summary = makeLocalResult(answer, expected, summary,username);
-    if(summary === -1){
+    summary = makeLocalResult(answer, expected, summary, username);
+    if (summary === -1) {
       return;
     }
   }
