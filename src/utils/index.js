@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const getName = () => readlineSync.question('May I have your name? ');
 
 const userWelcome = (name) => {
-  console.log(`Hello ${name}!`);
+  console.log(`Hello, ${name}!`);
 };
 
 const getRandom = (
