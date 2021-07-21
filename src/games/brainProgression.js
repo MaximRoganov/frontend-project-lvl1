@@ -17,7 +17,7 @@ const makeProgression = (start, step) => {
 
 //  Заменить нужный элемент массива на многоточие
 const replacePosition = (arr, position) => {
-  arr.splice(position, 1, '...');
+  arr.splice(position, 1, '..');
   return arr;
 };
 
@@ -38,7 +38,7 @@ const brainProgression = (username = getName(), needWelcome = true) => {
     const expected = progression[numofToChange];
     const stringProgression = replacePosition(progression, numofToChange);
 
-    const answer = readlineSync.question(`Quest : Write the undefined step of ariphmetic progression ${stringProgression.toString()} = ? `);
+    const answer = readlineSync.question(`Question: ${stringProgression.join(' ')}`);
     summary = makeLocalResult(parseInt(answer, 10), expected, summary,username);
     if(summary === -1){
       return;
