@@ -20,7 +20,7 @@ const brainEven = (username = getName(), needWelcome = true) => {
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const number = getRandom();
     const expected = isEven(number);
-    const answer = readlineSync.question(`Quest : ${number} is even? `);
+    const answer = readlineSync.question(`Question: ${number}`);
 
     summary = makeLocalResult(answer, expected, summary);
   }
