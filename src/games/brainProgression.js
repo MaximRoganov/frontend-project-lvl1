@@ -5,7 +5,7 @@ import {
 // Сделать массив-прогрессию
 const makeProgression = (start, step) => {
   const summator = [];
-  for (let i = start; i < start + step * 10; i += step) {
+  for (let i = start; i < start + step * 11; i += step) {
     summator.push(i);
   }
   return summator;
