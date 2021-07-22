@@ -1,10 +1,6 @@
-import readlineSync from 'readline-sync';
 import {
   getRandom,
-  getName,
-  userWelcome,
-  makeResult,
-  makeLocalResult,
+  gameEngine,
 } from '../utils/index.js';
 // Сделать массив-прогрессию
 const makeProgression = (start, step) => {
@@ -21,14 +17,9 @@ const replacePosition = (arr, position) => {
   return arr;
 };
 
-const brainProgression = (username = getName(), needWelcome = true) => {
-  if (needWelcome) {
-    userWelcome(username);
-  }
-
-  let summary = 0;
+const brainProgression = () => {
   const numberOfAttempts = 3;
-
+  const arrayForGameEngine = [];
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const firstNum = getRandom();
     const step = getRandom();
@@ -38,13 +29,10 @@ const brainProgression = (username = getName(), needWelcome = true) => {
     const expected = progression[numofToChange];
     const stringProgression = replacePosition(progression, numofToChange);
 
-    const answer = readlineSync.question(`Question: ${stringProgression.join(' ')}`);
-    summary = makeLocalResult(parseInt(answer, 10), expected, summary, username);
-    if (summary === -1) {
-      return;
-    }
+    const question = `Question: ${stringProgression.join(' ')}`;
+    arrayForGameEngine.push([question, expected]);
   }
-  makeResult(username, summary);
+  gameEngine(arrayForGameEngine);
 };
 
 export default brainProgression;
