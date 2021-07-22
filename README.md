@@ -8,6 +8,8 @@ Github actions
 
 ![Node.js CI](https://github.com/MaximRoganov/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)
 
+[![hexlet-check](https://github.com/MaximRoganov/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MaximRoganov/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
+
 How to prepare project to start:
 
 [![asciicast](https://asciinema.org/a/H78wEFAlCQ1Px9ViQe52bPoqW.svg)](https://asciinema.org/a/H78wEFAlCQ1Px9ViQe52bPoqW)
