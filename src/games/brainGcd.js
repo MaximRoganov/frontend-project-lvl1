@@ -37,6 +37,14 @@ const getBiggerDivider = (dividerArray) => {
   }
   return biggerNum;
 };
+const getGcd = (firstNum, secondNum) => (
+  getBiggerDivider(
+    getBothDivider(
+      getDivider(firstNum),
+      getDivider(secondNum),
+    ),
+  )
+);
 
 const brainGcd = () => {
   const numberOfAttempts = 3;
@@ -44,7 +52,7 @@ const brainGcd = () => {
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const firstNum = getRandom();
     const secondNum = getRandom();
-    const expected = getBiggerDivider(getBothDivider(getDivider(firstNum), getDivider(secondNum)));
+    const expected = getGcd(firstNum, secondNum);
     const question = `Question: ${firstNum} ${secondNum}`;
     arrayForGameEngine.push([question, expected]);
   }
