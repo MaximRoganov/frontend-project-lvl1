@@ -1,7 +1,5 @@
-import {
-  getRandom,
-  gameEngine,
-} from '../utils/index.js';
+import { getRandom, numberOfAttempts } from '../utils/index.js';
+import gameEngine from '../index.js';
 
 // Простое ли число?
 const isSimple = (num) => {
@@ -17,13 +15,12 @@ const isSimple = (num) => {
 };
 
 const brainPrime = () => {
-  const numberOfAttempts = 3;
   const arrayForGameEngine = [];
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const num = getRandom();
     const expected = isSimple(num) ? 'yes' : 'no';
-    const question = `Question: ${num}`;
-    arrayForGameEngine.push([question, expected]);
+    const question = `${num}`;
+    arrayForGameEngine.push([question, String(expected)]);
   }
   gameEngine(arrayForGameEngine);
 };

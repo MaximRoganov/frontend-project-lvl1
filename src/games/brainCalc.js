@@ -1,10 +1,7 @@
-import {
-  getRandom,
-  gameEngine,
-} from '../utils/index.js';
+import { getRandom, numberOfAttempts } from '../utils/index.js';
+import gameEngine from '../index.js';
 
 const brainCalc = () => {
-  const numberOfAttempts = 3;
   const arrayForGameEngine = [];
   const operationsList = ['-', '+', '*'];
   for (let i = 0; i < numberOfAttempts; i += 1) {
@@ -30,21 +27,15 @@ const brainCalc = () => {
         oper = '*';
         expected = firstNum * secondNum;
         break;
-        // дефолтное значение здесь только по требованию линтера
-        // на игру это никак не влияет и несуществующий оператор здесь никак не передать
-        // Скорее если numForOper будет неопределенного значения,
-        // то код ниже защитит от поломки выдаваемое значение
-        // и в случае чего пользователь будет получать просто кейс с вычитанием
-        // надеюсь я понятно объяснил
-        // если что-то не так, можно примерный рецепт того как лучше сделать?
       default:
-        oper = '-';
-        expected = firstNum - secondNum;
+        throw new Error(
+          `Unexpected type of operation brainCalc function : 'current type equal ${numForOper}'!`,
+        );
     }
 
-    const question = `Question: ${firstNum} ${oper} ${secondNum}`;
+    const question = `${firstNum} ${oper} ${secondNum}`;
 
-    arrayForGameEngine.push([question, expected]);
+    arrayForGameEngine.push([question, String(expected)]);
   }
   gameEngine(arrayForGameEngine);
 };
