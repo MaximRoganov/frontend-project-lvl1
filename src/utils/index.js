@@ -3,9 +3,6 @@ const getRandom = (
   minNumber = 1,
 ) => Math.floor(minNumber + Math.random() * (maxNumber + 1 - minNumber));
 
-const numberOfAttempts = 3;
-
 export {
-  getRandom,
-  numberOfAttempts,
+  getRandom as default,
 };

@@ -1,6 +1,7 @@
-import { getRandom, numberOfAttempts } from '../utils/index.js';
+import getRandom from '../utils/index.js';
+import numberOfAttempts from '../constants/index.js';
 import gameEngine from '../index.js';
-// Сделать массив-прогрессию
+
 const makeProgression = (start = 1, step = 1, length = 11) => {
   const summator = [];
   for (let i = start; i < start + step * length; i += step) {
@@ -16,21 +17,21 @@ const replacePosition = (arr, position) => {
 };
 
 const brainProgression = () => {
-  const arrayForGameEngine = [];
+  const gameEngineData = [];
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const firstNum = getRandom();
     const step = getRandom();
     const lengthOfProgression = 11;
     const progression = makeProgression(firstNum, step, lengthOfProgression);
 
-    const numofToChange = getRandom(10);
-    const expected = progression[numofToChange];
-    const stringProgression = replacePosition(progression, numofToChange);
+    const numOfItemToChange = getRandom(lengthOfProgression - 1);
+    const expected = progression[numOfItemToChange];
+    const stringProgression = replacePosition(progression, numOfItemToChange);
 
     const question = `${stringProgression.join(' ')}`;
-    arrayForGameEngine.push([question, String(expected)]);
+    gameEngineData.push([question, String(expected)]);
   }
-  gameEngine(arrayForGameEngine);
+  gameEngine(gameEngineData);
 };
 
 export default brainProgression;

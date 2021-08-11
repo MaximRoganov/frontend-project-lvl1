@@ -1,4 +1,5 @@
-import { getRandom, numberOfAttempts } from '../utils/index.js';
+import getRandom from '../utils/index.js';
+import numberOfAttempts from '../constants/index.js';
 import gameEngine from '../index.js';
 
 const getGcd = (first, second) => {
@@ -17,15 +18,15 @@ const getGcd = (first, second) => {
 };
 
 const brainGcd = () => {
-  const arrayForGameEngine = [];
+  const gameEngineData = [];
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const firstNum = getRandom();
     const secondNum = getRandom();
     const expected = getGcd(firstNum, secondNum);
     const question = `${firstNum} ${secondNum}`;
-    arrayForGameEngine.push([question, String(expected)]);
+    gameEngineData.push([question, String(expected)]);
   }
-  gameEngine(arrayForGameEngine);
+  gameEngine(gameEngineData);
 };
 
 export default brainGcd;
