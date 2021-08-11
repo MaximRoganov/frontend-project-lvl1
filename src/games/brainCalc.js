@@ -13,7 +13,7 @@ const brainCalc = () => {
 
     const secondNum = getRandom();
 
-    let oper; let expected;
+    let expected;
 
     switch (finallyOper) {
       case '-':
