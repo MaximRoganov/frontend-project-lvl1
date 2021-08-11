@@ -7,6 +7,7 @@ const brainCalc = () => {
   const operationsList = ['-', '+', '*'];
   for (let i = 0; i < numberOfAttempts; i += 1) {
     const numForOper = getRandom(operationsList.length - 1, 0);
+    const finallyOper = operationsList[numForOper];
 
     const firstNum = getRandom();
 
@@ -14,17 +15,14 @@ const brainCalc = () => {
 
     let oper; let expected;
 
-    switch (numForOper) {
-      case 0:
-        oper = '-';
+    switch (finallyOper) {
+      case '-':
         expected = firstNum - secondNum;
         break;
-      case 1:
-        oper = '+';
+      case '+':
         expected = firstNum + secondNum;
         break;
-      case 2:
-        oper = '*';
+      case '*':
         expected = firstNum * secondNum;
         break;
       default:
@@ -33,7 +31,7 @@ const brainCalc = () => {
         );
     }
 
-    const question = `${firstNum} ${oper} ${secondNum}`;
+    const question = `${firstNum} ${finallyOper} ${secondNum}`;
 
     gameEngineData.push([question, String(expected)]);
   }
