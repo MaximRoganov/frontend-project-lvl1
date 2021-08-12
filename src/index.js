@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const numberOfAttempts = 3;
+
 const gameEngine = (gameData) => {
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!`);
@@ -23,4 +25,4 @@ const gameEngine = (gameData) => {
   }
 };
 
-export default gameEngine;
+export { gameEngine, numberOfAttempts };

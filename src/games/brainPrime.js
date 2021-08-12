@@ -1,6 +1,5 @@
-import getRandom from '../utils/index.js';
-import numberOfAttempts from '../constants/index.js';
-import gameEngine from '../index.js';
+import getRandom from '../utils.js';
+import { numberOfAttempts, gameEngine } from '../index.js';
 
 // Простое ли число?
 const isPrime = (num) => {
